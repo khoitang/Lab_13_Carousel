@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="carousel-indicators"
+      href="https://getbootstrap.com/docs/5.0/components/carousel/"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Lab-12_Carousel_Page</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <head>
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">Carousel</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active">Link</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link disable"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Disable</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                type="search"
+                class="form-control me-2"
+                placeholder="Search"
+              />
+              <button
+                class="btn btn-outline-success"
+                type="submit"
+                aria-label="search"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </head>
+
+    <!-- Carousel -->
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active bg-img1">
+          <img src="img/bg.jpeg" class="d-block w-100 bg-img1" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Example headline</h1>
+            <p>Some representative placeholder content for the first slide.</p>
+            <p>
+              <a href="#" class="btn btn-primary btn-lg">Sign up today</a>
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item bg-img2">
+          <img src="img/IMG_0005.JPG" class="d-block w-100 bg-img2" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Anothor example headline</h1>
+            <p>Some representative placeholder content for the second slide.</p>
+            <p>
+              <a href="#" class="btn btn-primary btn-lg">Learn more</a>
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item bg-img3">
+          <img src="img/IMG_0479.JPG" class="d-block w-100 bg-img3" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1>One more for good measure</h1>
+            <p>Some representative placeholder content for the third slide.</p>
+            <p>
+              <a href="#" class="btn btn-primary btn-lg">Browse gallery</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-label="Slide 1"
+          aria-current="true"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+          class=""
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+          class=""
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active bg-img1">
+          <img src="img/bg.jpeg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block text-start">
+            <h1>Example headline</h1>
+            <p>Some representative placeholder content for the first slide.</p>
+            <p>
+              <a href="#" class="btn btn-primary btn-lg">Sign up today</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item active bg-img2">
+        <img src="img/bg copy.jpeg" class="d-block w-100" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Anothor example headline</h1>
+          <p>Some representative placeholder content for the second slide.</p>
+          <p>
+            <a href="#" class="btn btn-primary btn-lg">Learn more</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-item active bg-img3">
+        <img src="img/bg copy 2.jpeg" class="d-block w-100" alt="..." />
+        <div class="carousel-caption d-none d-md-block text-end">
+          <h1>One more for good measure</h1>
+          <p>Some representative placeholder content for the third slide.</p>
+          <p>
+            <a href="#" class="btn btn-primary btn-lg">Browse gallery</a>
+          </p>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+
+    <!-- Footer -->
+    <footer class="text-dark pt-md-5">
+      <div class="container">
+        <div class="d-flex">
+          <p>&copy;2017-2020 Company, Inc</p>
+          <p>&sdot;</p>
+          <a href="#">Privacy</a>
+          <p>&sdot;</p>
+          <a href="#" class="me-auto">Terms</a>
+          <a href="#">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
